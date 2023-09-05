@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+	int dan = Integer.parseInt(request.getParameter("dan"));
+	System.out.println(dan);
+%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>구구단</h1>
+<h2><%=dan%>단</h2>
+<table border="1">
+	<tr>
+		<td><%=dan%></td> <td>1</td> <td><%=dan*1%></td>
+	</tr>
+	<tr>
+		<td><%=dan%></td> <td>2</td> <td><%=dan*2%></td>
+	</tr>
+	<tr>
+		<td><%=dan%></td> <td>3</td> <td><%=dan*3%></td>
+	</tr>
+	<tr>
+		<td><%=dan%></td> <td>4</td> <td><%=dan*4%></td>
+	</tr>
+	<tr>
+		<td><%=dan%></td> <td>5</td> <td><%=dan*5%></td>
+	</tr>
+	<tr>
+		<td><%=dan%></td> <td>6</td> <td><%=dan*6%></td>
+	</tr>
+	<tr>
+		<td><%=dan%></td> <td>7</td> <td><%=dan*7%></td>
+	</tr>
+	<tr>
+		<td><%=dan%></td> <td>8</td> <td><%=dan*8%></td>
+	</tr>
+	<tr>
+		<td><%=dan%></td> <td>9</td> <td><%=dan*9%></td>
+	</tr>
+	
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>전화번호 등록</h1>
+	<h2>등록폼</h2>
+	
+	<p>정보를 등록하는 폼입니다. 정보를 등록하고 등록 버튼을 누르세요.</p>
+	
+	이름(name): <input type="text" id="name"><br>
+	핸드폰(hp): <input type="text" id="hp"><br>
+	회사(company): <input type="text" id="company"><br>
+	
+	<button id="button">등록</button>
+	
+	<script>
+
+	const name = document.getElementById('name').value;
+	const hp = document.getElementById('hp').value;
+	const company = document.getElementById('company').value;
+	
+	const url =	'location.href="http://localhost:8000/phonebook2/insert.jsp?name="+name+"&hp="+hp+"&company="+company"';	
+	
+	const button = document.getElementById('button');
+
+	
+	</script>
+
+	<br>
+	<br>
+	
+	<a href="http://localhost:8000/phonebook2/list.jsp">리스트로 바로가기</a>
+	
+</body>
+</html>

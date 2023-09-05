@@ -1,0 +1,7 @@
+INDEX VERSION 1.134
+C:\javaStudy\workspace-web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1606189534.index
+\helloweb\src\main\java
+C:\javaStudy\workspace-web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2276123442.index
+\phonebook2\src\main\java
+C:\javaStudy\workspace-web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1858637613.index
+\phonebook2\src\main\java

@@ -1,0 +1,48 @@
+package com.javaex.gugudan;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class Gugudan
+ */
+@WebServlet("/Gugudan")
+public class Gugudan extends HttpServlet {
+	
+	//필드
+
+	//생성자 : 디폴트 생성자 사용
+
+	//메소드 gs : 만들게 없음
+	
+	//메소드 일반
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int dan = Integer.parseInt(request.getParameter("dan"));
+		System.out.println(dan);
+		
+		PrintWriter writer = response.getWriter();
+		writer.println("<table border='1'>");
+		
+		for(int i =0; i<=9; i++) {
+			writer.println("	<tr>");
+			writer.println("		<td>"+dan+"</td> <td>1</td> <td>"+dan+"</td>");
+			writer.println("	</tr>");	
+		}
+		writer.println("</table>");
+		
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		doGet(request, response);
+	}
+
+}
