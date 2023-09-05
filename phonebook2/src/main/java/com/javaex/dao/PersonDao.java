@@ -248,6 +248,7 @@ public class PersonDao {
 			if(!keyword.equals("")) { //keyword가 ""가 아니면 ==> keyword가 있으면 검색
 				query += " where name like ? ";
 			}
+			query += " order by person_id ";
 			
 			pstmt = conn.prepareStatement(query);
 
@@ -280,6 +281,53 @@ public class PersonDao {
 		this.close();
 
 		return personList;
+
+	}
+	
+	public PersonVo getPerson(int id) {
+
+		PersonVo personVo = null;
+
+		this.getConnect();
+
+		try {
+			// 3. SQL문 준비 / 바인딩 / 실행
+			// SQL문 준비
+			String query = "";
+			query += " select  person_id, ";
+			query += "         name, ";
+			query += "         hp, ";
+			query += "         company ";
+			query += " from person ";
+			query += " where person_id = ? ";
+			
+			pstmt = conn.prepareStatement(query);
+
+			//바인딩
+			pstmt.setInt(1, id);
+
+			// 실행
+			rs = pstmt.executeQuery();
+
+			// 4.결과처리
+			while (rs.next()) {
+
+				int personId = rs.getInt(1);
+				String name = rs.getString(2);
+				String hp = rs.getString(3);
+				String company = rs.getString(4);
+
+				personVo = new PersonVo(personId, name, hp, company);
+
+			}
+
+		} catch (SQLException e) {
+			System.out.println("error:" + e);
+		}
+
+		this.close();
+
+		return personVo;
 
 	}
 }

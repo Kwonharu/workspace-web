@@ -8,7 +8,7 @@
 	PersonDao personDao = new PersonDao();
 	List<PersonVo> personList = personDao.personSelect("");
 	
-	System.out.println(personList);
+	//System.out.println(personList);
 	
 %>
     
@@ -37,12 +37,27 @@
 		<tr>
 			<td>회사(company)</td><td><%=personList.get(i).getCompany()%></td>
 		</tr>
+		<tr>
+			<td>
+				<a href="./updateForm.jsp?id=<%=personList.get(i).getPerson_id()%>">수정</a>
+			</td>
+			<td>
+				<a href="./delete.jsp?id=<%=personList.get(i).getPerson_id()%>">삭제</a>
+			</td>
+		</tr>
 	</table>
 	<br>
 	<%} %>
 	<!-- 반복문 끝 -->
 	
-	<a href="http://localhost:8000/phonebook2/writeForm.jsp">전화번호 등록폼</a>
+	<!-- ./ : 파일의 현재 위치 (상대경로) -->
+	<a href="./writeForm.jsp">전화번호 등록폼</a> <br>
+	
+	<!-- / : root (절대경로) -->
+	<a href="/writeForm.jsp">전화번호 등록폼</a> <br>
+	
+	<!-- 읎서요 : == ./ -->
+	<a href="writeForm.jsp">전화번호 등록폼</a>
 
 </body>
 </html>

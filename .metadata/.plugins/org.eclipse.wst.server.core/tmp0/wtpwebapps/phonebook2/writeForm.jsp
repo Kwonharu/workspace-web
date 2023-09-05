@@ -13,7 +13,7 @@
 	<p>정보를 등록하는 폼입니다. 정보를 등록하고 등록 버튼을 누르세요.</p>
 	
 	<!-- http://localhost:8000/phonebook2/insert.jsp?name=asdf&hp=asdf&company=asdf -->
-	<form action="./insert.jsp" method="get">
+	<form action="./insert.jsp" method="post">
 		이름(name): <input type="text" name="name"><br>
 		핸드폰(hp): <input type="text" name="hp"><br>
 		회사(company): <input type="text" name="company"><br>
@@ -24,7 +24,7 @@
 	<br>
 	<br>
 	
-	<a href="http://localhost:8000/phonebook2/list.jsp">리스트로 바로가기</a>
+	<a href="./list.jsp">리스트로 바로가기</a>
 	
 </body>
 </html>
